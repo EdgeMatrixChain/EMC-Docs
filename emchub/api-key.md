@@ -1,1 +1,1 @@
-#### EMC Ecosystem Docs
+#### EMC Hub API Key
