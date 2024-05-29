@@ -42,7 +42,7 @@ Host: oauth.emchub.ai
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic Y2xpZW50X2lkOmNsaWVudF9zZWNyZXQ=
 
-grant_type=authorization_code&code=auth_code_received&redirect_uri=https://yourapp.com/callback
+grant_type=authorization_code&code=auth_code_received&redirect_uri=https://emchub.ai
 ```
 
 ### Obtaining Token with Refresh Token
