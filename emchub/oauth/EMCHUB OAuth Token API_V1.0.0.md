@@ -27,9 +27,9 @@ Note: The value of the Authorization header is the Base64 encoded result of clie
 
 | Parameter     | Type   | Required | Description                                                  |
 | ------------- | ------ | -------- | ------------------------------------------------------------ |
-| grant_type    | string | Yes      | The grant type. Typical values: `authorization_code`, `password`, `client_credentials`, `refresh_token` |
+| grant_type    | string | Yes      | The grant type. Typical values: `authorization_code`, `refresh_token` |
 | code          | string | No       | Authorization code (for `authorization_code` grant type)     |
-| redirect_uri  | string | No       | Redirect URI (for `authorization_code` grant type)           |
+| redirect_uri  | string | No       | Redirect URI (for `authorization_code` grant type,The current version uses a fixed value for the redirect URL: https://emchub.ai)           |
 | refresh_token | string | No       | Refresh token (for `refresh_token` grant type)               |
 
 ## Request Examples
