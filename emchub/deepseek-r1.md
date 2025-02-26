@@ -4,7 +4,7 @@ The DeepSeek API uses an API format compatible with OpenAI. By modifying the con
 
 | Param          | Value                                                                             |
 |----------------|-----------------------------------------------------------------------------------|
-| api_url        | apply for an Static Api url or dynamic direct connection url obtained from EMCHub |
+| API URL        | apply for an Static Api url or dynamic direct connection url obtained from EMCHub |
 | EMCHub API Key | apply for an API key obtained from EMCHub                                         |
 * The deepseek-chat model has been upgraded to DeepSeek-V3. The API remains unchanged. You can invoke DeepSeek-V3 by specifying model='deepseek-chat'.
 
@@ -17,9 +17,9 @@ Once you have obtained an API key, you can access the DeepSeek API using the fol
 
 ### curl
 ````
-curl <api_url> \
+curl <API_URL> \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer <api_key>" \
+  -H "Authorization: Bearer <EMCHub API Key>" \
   -d '{
         "model": "deepseek-chat",
         "messages": [
