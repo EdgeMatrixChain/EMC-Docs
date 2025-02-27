@@ -1,4 +1,4 @@
-# DeepSeeK API Call - Beta
+# DeepSeeK API - Beta
 The DeepSeek API uses an API format compatible with OpenAI. By modifying the configuration, you can use the OpenAI SDK or softwares compatible with the OpenAI API to access the DeepSeek API.
 
 
