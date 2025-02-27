@@ -1,7 +1,10 @@
-#### EMC Docs
+# EMC Docs
 
-## model
+## emchub
+emchub documentations
+
+### emchub/model
 Model documentation already deployed on the network。
 
-## oauth
+### emchub/oauth
 EMCHub Cloud documentation 
