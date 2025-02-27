@@ -17,7 +17,7 @@ Once you have obtained an API key, you can access the DeepSeek API using the fol
 
 ### curl
 ````
-curl <API_URL> \
+curl <API URL> \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer <EMCHub API Key>" \
   -d '{
