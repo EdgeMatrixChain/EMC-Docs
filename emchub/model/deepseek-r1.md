@@ -10,7 +10,9 @@ The DeepSeek API uses an API format compatible with OpenAI. By modifying the con
 
 * deepseek-reasoner is the latest reasoning model, DeepSeek-R1, released by DeepSeek. You can invoke DeepSeek-R1 by specifying model='deepseek-reasoner'.
 
-* [How to obtain  dynamic direct connection url](https://github.com/EdgeMatrixChain/EMC-Docs/blob/main/emchub/query%20dynamic%20url.md)
+* Using dynamic direct connection url to call APIs will result in faster response times, but because edge nodes in P2P networks cannot guarantee constant availability, you need to manage the availability of urls yourself.
+
+[How to obtain  dynamic direct connection url](https://github.com/EdgeMatrixChain/EMC-Docs/blob/main/emchub/query%20dynamic%20url.md)
 
 ## Invoke The Chat API
 Once you have obtained an API key, you can access the DeepSeek API using the following example scripts. This is a non-stream example, you can set the stream parameter to true to get stream response.
