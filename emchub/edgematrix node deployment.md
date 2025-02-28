@@ -16,24 +16,11 @@ The EMC test network currently prioritizes GPU providers from EPN (EdgeMatrix Pa
 
 ## 1. Install Docker and NVIDIA Virtualization
 ```bash
-# 1. Install dependencies
-sudo apt-get update
-sudo apt-get install ca-certificates curl gnupg
-sudo install -m 0755 -d /etc/apt/keyrings
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-sudo chmod a+r /etc/apt/keyrings/docker.gpg
-
-# 2. Configure repositories
-echo \
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-
-# 3. Install Docker
+# 1. . Install Docker
 sudo apt update
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+curl -fsSL https://get.docker.com -o get-docker.sh && chmod +x get-docker.sh && bash get-docker.sh
 
-# 4. Install NVIDIA GPU Docker Virtualization
+# 2. Install NVIDIA GPU Docker Virtualization
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
       && curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
       && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list | \
@@ -45,7 +32,7 @@ sudo systemctl restart docker
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 
-# 5. Verify deployment
+# 3. Verify deployment
 sudo docker run --rm --gpus=all nvidia/cuda:11.8.0-base-ubuntu22.04 nvidia-smi
 ```
 
