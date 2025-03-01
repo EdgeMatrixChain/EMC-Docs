@@ -4,7 +4,7 @@
 The EMC test network currently prioritizes GPU providers from EPN (EdgeMatrix Partner Network) partners.  
 
 - **If you represent an IDC or computing center**, please consider joining the EPN program.  
-- **If you are an individual node operator capable of providing stable computing power for AI applications and clients**, contact us before deploying/staking tokens to your node to join the test network whitelist. Contact administrators on Discord for details.  
+- **If you are an individual node operator capable of providing stable computing power for AI applications and clients**, deploying/staking tokens to your node to join the edgematrix network. Contact administrators on Discord for details.  
 
 ---
 
