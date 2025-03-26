@@ -7,7 +7,7 @@ This API allows you to convert an audio file (e.g., .mp3) into transcribed text 
 | API URL        | apply for an Static Api url or dynamic direct connection url obtained from EMCHub |
 | EMCHub API Key | apply for an API key obtained from EMCHub                                         |
 
-* [How to obtain  dynamic direct connection url]()
+* [How to obtain  dynamic direct connection url](https://github.com/EdgeMatrixChain/EMC-Docs/blob/main/emchub/query%20dynamic%20url.md)
 
 ## Invoke The API
 Once you have obtained an API key, you can access the SenseVoice API using the following example scripts. 
