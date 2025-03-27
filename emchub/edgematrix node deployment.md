@@ -15,12 +15,13 @@ The EdgeMatrixComputing network currently prioritizes GPU providers from EPN (Ed
 ---
 
 ## 1. Install Docker and NVIDIA Virtualization
+1. Install Docker
+2. Install NVIDIA GPU Docker Virtualization
+3. Verify deployment
 ```bash
-# 1. . Install Docker
 sudo apt update
 curl -fsSL https://get.docker.com -o get-docker.sh && chmod +x get-docker.sh && bash get-docker.sh
 
-# 2. Install NVIDIA GPU Docker Virtualization
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
       && curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
       && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list | \
@@ -32,7 +33,6 @@ sudo systemctl restart docker
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker
 
-# 3. Verify deployment
 sudo docker run --rm --gpus=all nvidia/cuda:11.8.0-base-ubuntu22.04 nvidia-smi
 ```
 
