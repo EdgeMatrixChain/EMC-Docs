@@ -38,22 +38,19 @@ sudo docker run --rm --gpus=all nvidia/cuda:11.8.0-base-ubuntu22.04 nvidia-smi
 
 ## 2. Deploy EMC and EMC Cloud
 ```bash
-# Linux
-curl -s https://install.edgematrix.pro/setup_linux.sh | sh  # Initialize EMC
-curl -s https://install.edgematrix.pro/setup_cloud_linux.sh | sh  # Initialize EMC CLOUD
+curl -s https://install.edgematrix.pro/setup_linux.sh | sh
+curl -s https://install.edgematrix.pro/setup_cloud_linux.sh | sh
 
-# Start the node
 cd emc
 ./start.sh
 
-# Start EMC CLOUD
 cd ../cloud
 ./cloud_client.sh
 ```
 
 ## 3. Register Node Reward Wallet
+Replace "xxxxxx" with your Arbitrum chain wallet address
 ```bash
-# Replace "xxxxxx" with your Arbitrum chain wallet address
 ./edge-matrix-computing node register --commit set --node computing --owner xxxxxx
 ```
 
@@ -74,14 +71,12 @@ Staking URL: https://dashboard.emc.network/nodes/xxxxxx
 ```
 
 ## 5. Verification and Monitoring Scripts
+Check version,Query Node ID,Check node status
 ```bash
-# Check version
 ./edge-matrix-computing version
 
-# Query Node ID
 ./edge-matrix-computing secrets output --data-dir edge_data
 
-# Check node status
 ./edge-matrix-computing node status
 ```
 Node Type Clarification:
@@ -92,21 +87,21 @@ Computing Nodes: Recommended for most users
 
 ## Reinstallation Guide
 Critical: Backup emc/edge_data to retain original Node ID and wallet address.
+1. Terminate processes
+2. Backup data
+3. Clean installation
+4. Reinstall EMC node
+5. Restore data
 ```bash
-# 1. Terminate processes
 sudo pkill edge-matrix 
 sudo pkill nomad
 
-# 2. Backup data
 cd emc
 sudo cp -r edge_data ../
 
-# 3. Clean installation
 cd ..
 sudo rm -rf emc cloud emc_cloud_linux_64.tgz emc_linux_64.tgz
 
-# 4. Reinstall EMC node
-# 5. Restore data
 sudo cp -rf edge_data emc/
 ```
 
