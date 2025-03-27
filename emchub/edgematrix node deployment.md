@@ -51,6 +51,7 @@ cd ../cloud
 ## 3. Register Node Reward Wallet
 Replace "xxxxxx" with your Arbitrum chain wallet address
 ```bash
+cd ../emc
 ./edge-matrix-computing node register --commit set --node computing --owner xxxxxx
 ```
 
