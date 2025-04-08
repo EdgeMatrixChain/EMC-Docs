@@ -79,7 +79,14 @@ Check version,Query Node ID,Check node status
 ./edge-matrix-computing secrets output --data-dir edge_data
 
 ./edge-matrix-computing node status
+
 ```
+After 30 minutes to 1 hour, run this command "sudo docker ps | grep edgematrix" and you will see the following output:
+
+![alt text](image-1.png)
+
+that means your node is running totally.
+
 Node Type Clarification:
 
 Validator/Routing Nodes: Require EMC token staking (Contact us for registration)
